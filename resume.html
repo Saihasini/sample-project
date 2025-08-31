@@ -13,7 +13,21 @@
             font-weight: bold;
             font-size:25px;
             font-style: oblique;
+            
 
+        }
+        #details > h4::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 3px;
+            background: darkgreen;
+            transition: width 0.4s ease;
+            margin-top: 5px;
+        }
+
+        #details > h4:hover::after {
+            width: 100%;
         }
         #details>h5{
             position: relative;
@@ -46,14 +60,19 @@
       th{
         padding: 20px;
       }
-      .details h5{
+      #details h5{
         padding-left:20px;
         padding-right:20px;
         padding-top:20px;
         padding-bottom: 20px;
 
       }
-
+      div{
+            border: 3px solid black;   /* Border */
+            margin: 20px;             /* Gap from nav */
+            padding: 20px;           
+      }
+    
 
     </style>
     <link rel="stylesheet" href="style.css">
@@ -69,6 +88,7 @@
         <a href="technicalskills.html">SKILLS</a>
         <a href="contact.html">CONTACT</a>
     </nav><hr>
+    <div>
     <h3>RESUME</h3>
     <h2>GOUNDLA SAI HASINI</h2><br><br>
     <section id="details">
@@ -157,6 +177,7 @@
 <li>NPTEL:Theory of compution.{ july-sep 2024}</li>
 </ul>
 </section>
+</div>
 <footer style="background-color: dimgrey;">
     <h6>contact number:9959952513. hasinigoundla335@gmail.com . &copy; all rights reserved</h6>
 </footer>

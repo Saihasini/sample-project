@@ -17,11 +17,26 @@ nav{
   text-align:center;
 
 }
-footer>h6{
-        color:aliceblue;
-        background-color: black;
-        font-size: 20px;
-        word-spacing: 20px;
-        
+
+footer h6 {
+    color: white;
+    /* margin: 0; */
+    background-color: rgb(144, 140, 140);
+    font-size: 20px;
+    word-spacing: 20px;
+    white-space: nowrap; /* prevents text from breaking into multiple lines */
+
+    position: absolute;
+    animation: scrollText 60s linear infinite; /* run forever */
+}
+
+/* Animation keyframes for scrolling */
+@keyframes scrollText {
+    from {
+        left: 100%;   /* start from outside right */
+    }
+    to {
+        left: -100%;  /* move all the way to left */
+    }
 }
 

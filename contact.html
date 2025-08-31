@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfolio</title>
+    
     <style>
          h3{
         text-align:center;
@@ -13,18 +14,23 @@
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       }
        table{
-        border-style:solid;
         margin-bottom: 140px;
         margin-top: 140px;
-        margin-left:550px; 
-        background-color:black;
+        margin-left:550px;
+        align-items: center;
         padding: 3px;
+        animation: slideSide 15s infinite ease-in-out;
       } 
       tr a{
         color: rgb(182, 58, 115);
         font-size: 30px;
         padding-left:40px;
       }
+      tr a:hover{
+        color: cadetblue;
+        background-color: rgb(50, 49, 68);
+      }
+      -
       tr{
         font-size: 30px;
         padding-left:40px;
@@ -36,7 +42,19 @@
       button:hover{
         color: cadetblue;
         background-color: black;
-      }  */
+      } 
+      table, th, td {
+  border: 1px solid black;   /* Adds border */
+  border-collapse: collapse; /* Removes double lines */
+}
+
+      @keyframes slideSide {
+  0%   { transform: translate(0, 0); }
+  25%  { transform: translate(150px, -100px); }  /* right + little up */
+  50%  { transform: translate(0, 0); }         /* center */
+  75%  { transform: translate(-150px, 100px); }  /* left + little down */
+  100% { transform: translate(0, 0); }         /* center */
+}
     </style>
      <link rel="stylesheet" href="style.css">
 </head>
@@ -53,7 +71,7 @@
     </nav><hr>
     <h3>MY CONTACT DETAILS</h3>
     <span>
-      <table>
+      <table class="table table-bordered">
         <tr>
           <td>Email:</td>
           <td><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">hasinigoundla335@gmail.com</a></td>
@@ -77,8 +95,8 @@
         </tr>
       </table>  
     </span>
-    <footer style="background-color: dimgrey;">
-    <h6 style="color:azure;">contact number:9959952513. hasinigoundla335@gmail.com . &copy; all rights reserved</h6>
+    <footer>
+    <h6>contactnumber:9959952513. hasinigoundla335@gmail.com . &copy; all rights reserved</h6>
 </footer> 
 </body>
 </html>
