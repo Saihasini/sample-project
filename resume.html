@@ -8,7 +8,7 @@
         h1{
             color:darkmagenta;
         }
-        #details>h4{
+        .details>h4{
             color:rgb(9, 70, 9);
             font-weight: bold;
             font-size:25px;
@@ -16,7 +16,7 @@
             
 
         }
-        #details > h4::after {
+        .details > h4::after {
             content: "";
             display: block;
             width: 0;
@@ -26,16 +26,16 @@
             margin-top: 5px;
         }
 
-        #details > h4:hover::after {
+     .details > h4:hover::after {
             width: 100%;
         }
-        #details>h5{
+        .details>h5{
             position: relative;
             left: 30px;
             text-decoration: underline;
             font-size: 20px;
         }
-        #details>p{
+         .details>p{
             position: relative;
             left:20px;
         }
@@ -60,7 +60,7 @@
       th{
         padding: 20px;
       }
-      #details h5{
+      .details h5{
         padding-left:20px;
         padding-right:20px;
         padding-top:20px;
@@ -70,17 +70,42 @@
       div{
             border: 3px solid black;   /* Border */
             margin: 20px;             /* Gap from nav */
-            padding: 20px;           
+            padding: 20px;  
+            overflow: auto;         
       }
     
+.header-section {
+            display: flex;
+            flex-direction: column; /* Stacks items vertically */
+            align-items: center; /* Centers items horizontally */
+            background-color: #9bb66c; /* Darker header background */
+            padding: 20px;
+        }
 
+        .header-section img {
+            border-radius: 50%; /* Rounded image */
+            width: 200px;
+            height: 200px;
+            border: 6px solid #383201; /* Border around image */
+            margin-bottom: 20px; /* Adds space below the image */
+        }
+
+        .header-section h1 {
+            text-align: center; /* Centers the text within the h1 element */
+            font-size: 2.5em;
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+        }
     </style>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header class="header-section">
+        <img src="Img/1.jpg" alt="Profile Photo">
+        <h1>GOUNDLA SAI HASINI</h1>
+    </header>
    <nav>
-        <img src="Img/Screenshot 2025-08-01 170141.png" alt="passphoto"><br>
+        <!-- <img src="Img/Screenshot 2025-08-01 170141.png" alt="passphoto"><br> -->
         <a href="index.html">HOME</a>
         <a href="about.html">ABOUT</a>
         <a href="projects.html">PROJECT</a>
@@ -91,7 +116,7 @@
     <div>
     <h3>RESUME</h3>
     <h2>GOUNDLA SAI HASINI</h2><br><br>
-    <section id="details">
+    <section class="details">
     
     <h4 style="margin-left: 20px;">EDUCATION:-</h4><hr>
     <table>
@@ -121,16 +146,16 @@
         </tr>
     </table>
     </section><br><br>
-<section id="details">
+<section class="details">
     <h4 style="margin-left: 20px;">TECHNICAL SKILLS:-</h4><hr>
-    <ul tyle="circle">
+    <ul type="circle">
         <li>Languages: Python</li>
         <li>Tools & Frameworks: online gdb,leet code,google colab</li>
         <li>Web Programming: HTML, CSS</li>
         <li>DataBases: SQL.</li>
     </ul>
 </section><br><br>
-<section id="details">
+<section class="details">
     <h4 style="margin-left: 20px;">PROJECTS:-</h4><hr>
     <h5 style="color:deeppink">Sleep health and lifestyle| PYTHON, ML.{Jul 2023}</h5>
   <p>Developed a fully functional web deployed sleep health and lifestyle prediction in a period of 4 weeks.
@@ -156,14 +181,14 @@
  <br>Enabled users to input images or video streams, view detected poses, and analyze results within an efficient and
  user-friendly interface</p>
 </section>
-<section id="details">
+<section class="details">
     <h4 style="margin-left: 20px;">ACCOMPLISHMENTS:-</h4><hr>
     <p>Patent Published:<br>
  Successfully published a patent for AUTONOMOUS ROBOTIC CLEANER FOR
  MAINTENANCE OF SOLAR PANELS.(pending approval)
  {MAY 2024}</p>
 </section><br>
-<section id="details">
+<section class="details">
     <h4 style="margin-left: 20px;">CERTIFICATION:-</h4><hr>
     <ul>
 <li>Microsoft Certified: Azure AI Fundamentals.{ march 2024}</li>

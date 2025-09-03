@@ -1,15 +1,36 @@
-nav a {
-    margin-right:60px;
-    font-size: 30px;
-    word-spacing:100px;
-    color: rgb(170, 82, 19);
-  }
+
+ nav {
+            background-color: #556b2f; /* Navigation background color */
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+}  
+ nav a {
+            text-decoration: none;
+            color: #4b371c; /* Darker link color */
+            font-size: 1.1em;
+            font-weight: bold;
+            padding: 10px 20px;
+           
+            border-radius: 5px;
+            margin-right:60px;
+            font-size: 30px;
+            word-spacing:100px;
+}
+nav a:hover {
+            color: #ffffff;
+            background-color: #8b4513; /* Hover color */
+}
+
 *{
   background-color:rgb(219, 221, 195);
   
 }
 body{ 
             border-width: 10px;
+            height: 100%;
+  margin: 0;
+  padding: 0;
         
         }
 nav{
