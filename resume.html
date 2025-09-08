@@ -13,8 +13,6 @@
             font-weight: bold;
             font-size:25px;
             font-style: oblique;
-            
-
         }
         .details > h4::after {
             content: "";
@@ -25,7 +23,6 @@
             transition: width 0.4s ease;
             margin-top: 5px;
         }
-
      .details > h4:hover::after {
             width: 100%;
         }
@@ -52,7 +49,7 @@
       table{
         border-style: solid;
         margin-left: 30px; 
-        background-color: black;
+        /* background-color: black; */
       }
       td{
         padding: 20px;
@@ -65,15 +62,13 @@
         padding-right:20px;
         padding-top:20px;
         padding-bottom: 20px;
-
       }
-      div{
-            border: 3px solid black;   /* Border */
+      .resume-container{
+            border: 3px solid black;   
             margin: 20px;             /* Gap from nav */
             padding: 20px;  
             overflow: auto;         
-      }
-    
+      }  
 .header-section {
             display: flex;
             flex-direction: column; /* Stacks items vertically */
@@ -81,7 +76,6 @@
             background-color: #9bb66c; /* Darker header background */
             padding: 20px;
         }
-
         .header-section img {
             border-radius: 50%; /* Rounded image */
             width: 200px;
@@ -89,7 +83,6 @@
             border: 6px solid #383201; /* Border around image */
             margin-bottom: 20px; /* Adds space below the image */
         }
-
         .header-section h1 {
             text-align: center; /* Centers the text within the h1 element */
             font-size: 2.5em;
@@ -100,12 +93,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header-section">
-        <img src="Img/1.jpg" alt="Profile Photo">
+     <header class="header-section">
+    <div class="name-container">
         <h1>GOUNDLA SAI HASINI</h1>
-    </header>
+    </div>
+    <div class="image-container">
+        <img src="Img/1.jpg" alt="Profile Photo">
+    </div>
+</header>
+
    <nav>
-        <!-- <img src="Img/Screenshot 2025-08-01 170141.png" alt="passphoto"><br> -->
         <a href="index.html">HOME</a>
         <a href="about.html">ABOUT</a>
         <a href="projects.html">PROJECT</a>
@@ -113,11 +110,10 @@
         <a href="technicalskills.html">SKILLS</a>
         <a href="contact.html">CONTACT</a>
     </nav><hr>
-    <div>
+    <div class="resume-container">
     <h3>RESUME</h3>
     <h2>GOUNDLA SAI HASINI</h2><br><br>
-    <section class="details">
-    
+    <section class="details">    
     <h4 style="margin-left: 20px;">EDUCATION:-</h4><hr>
     <table>
         <tr>

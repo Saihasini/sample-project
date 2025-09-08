@@ -3,78 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio</title>
-    <style>
-       .header-section {
-            display: flex;
-            flex-direction: column; /* Stacks items vertically */
-            align-items: center; /* Centers items horizontally */
-            background-color: #9bb66c; /* Darker header background */
-            padding: 20px;
-        }
-
-        .header-section img {
-            border-radius: 50%; /* Rounded image */
-            width: 200px;
-            height: 200px;
-            border: 6px solid #383201; /* Border around image */
-            margin-bottom: 20px; /* Adds space below the image */
-        }
-
-        .header-section h1 {
-            text-align: center; /* Centers the text within the h1 element */
-            font-size: 2.5em;
-            margin: 0;
-            font-family: 'Playfair Display', serif;
-        }
-        h3{
-        text-align:center;
-        text-decoration: underline;
-        color:blue;
-        font-size: 30px;
-        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      }
-
-      .about{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .about p{
-        
-        color:rgb(220, 213, 222);
-        font-size: 20px;
-        border-style:solid;
-        border-color: rgb(218, 2, 2);
-        background-color: rgb(88, 88, 88);
-        width:500px;
-        padding:60px;
-        border-radius: 30px;
-      }
-    </style>
+    <title>Portfolio - Goundla Sai Hasini</title>
      <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .header-section {
+    position: relative;
+    display: flex;
+    justify-content: center; /* center content */
+    align-items: center;
+    background: linear-gradient(to bottom, #8db600, #2c4200);
+    padding: 90px 30px;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.header-section .name-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1;
+}
+
+.header-section h1 {
+    font-size: 2.8em;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+}
+
+.image-container {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.header-section img {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    border: 5px solid #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.header-section img:hover {
+    transform: scale(1.05);
+}
+
+
+        /* NAVIGATION BAR */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #2e2e2e;
+            padding: 15px 0;
+            position: relative;
+            /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); */
+        }
+
+        nav a {
+            color: #ffffff;
+            /* text-decoration: none; */
+            margin: 0 20px;
+            font-size: 18px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+            position: relative;
+            font-weight: bold;
+        }
+
+        nav a::after {
+            content: "";
+            display: block;
+            height: 3px;
+            background-color: #8db600;
+            width: 0;
+            transition: width 0.3s;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a:hover {
+            color: #8db600;
+        }
+
+      
+        h3 {
+            text-align: center;
+            text-decoration: underline;
+            color: blue;
+            font-size: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .about {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .about p {
+            color: rgb(220, 213, 222);
+            font-size: 20px;
+            border-style: solid;
+            border-color: rgb(218, 2, 2);
+            background-color: rgb(88, 88, 88);
+            width: 500px;
+            padding: 60px;
+            border-radius: 30px;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #2e2e2e;
+            color: #fff;
+            text-align: center;
+            padding: 40px;
+            font-size: 14px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        footer h6 {
+            margin: 0;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about p {
+                width: 90%;
+                padding: 40px;
+            }
+
+            .header-section img {
+                width: 140px;
+                height: 140px;
+            }
+
+            .header-section h1 {
+                font-size: 2em;
+            }
+
+            nav a {
+                margin: 10px 0;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header class="header-section">
-        <img src="Img/1.jpg" alt="Profile Photo">
+
+    <header class="header-section">
+    <div class="name-container">
         <h1>GOUNDLA SAI HASINI</h1>
-    </header>
+    </div>
+    <div class="image-container">
+        <img src="Img/1.jpg" alt="Profile Photo">
+    </div>
+</header>
+
     
     <nav>
-        <!-- <img src="Img/Screenshot 2025-08-01 170141.png" alt="passphoto"><br> -->
-        <a href="index.html">HOME</a>
+        <a href="index.html" class="active">HOME</a>
         <a href="about.html">ABOUT</a>
         <a href="projects.html">PROJECT</a>
         <a href="resume.html">RESUME</a>
         <a href="technicalskills.html">SKILLS</a>
         <a href="contact.html">CONTACT</a>
-    </nav><hr>
+    </nav>
+
+    <hr>
+
     <h3>GOUNDLA SAI HASINI</h3>
+
     <div class="about">
-    <p>Hi, I'm Goundla Sai Hasini.<br>I'm a final year Computer Science Engineering student at SR University<br>i am passionate about AI, ML, and software development.<br>
-Welcome to my personal portfolio . <br>Here you'll find details about my projects, skills, certifications, and achievements.</p></div>
-<footer>
-    <h6>contactnumber:9959952513. hasinigoundla335@gmail.com . &copy; all rights reserved</h6>
-</footer>
+        <p>
+            Hi, I'm Goundla Sai Hasini.<br>
+            I'm a final year Computer Science Engineering student at SR University.<br>
+            I am passionate about AI, ML, and software development.<br>
+            Welcome to my personal portfolio!<br>
+            Here you'll find details about my projects, skills, certifications, and achievements.
+        </p>
+    </div>
+
+    <footer>
+        <h6>Contact: 9959952513 | hasinigoundla335@gmail.com &copy; All rights reserved</h6>
+    </footer>
+
 </body>
 </html>
